@@ -1,5 +1,5 @@
 
-    #when starting up the server use 'rails s -p 'wanted port number'
+    #when starting up the server use 'rails s -p 'wanted port number' because the react front end will use 3000
 
 class Api::V1::MessagesController < ApplicationController
     def index 
