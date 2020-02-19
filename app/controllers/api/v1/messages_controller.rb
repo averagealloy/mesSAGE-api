@@ -1,3 +1,6 @@
+
+    #when starting up the server use 'rails s -p 'wanted port number'
+
 class Api::V1::MessagesController < ApplicationController
     def index 
         @messages = Message.all 
