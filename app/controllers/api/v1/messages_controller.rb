@@ -24,7 +24,7 @@ class Api::V1::MessagesController < ApplicationController
     def update
         @message = Message.find(params[:id])
         @message.update(message_params)
-        render json: @message, status: 200
+        render json: @message,  status: 200
     end 
 
     def destroy
@@ -36,6 +36,6 @@ class Api::V1::MessagesController < ApplicationController
     private 
 
     def message_params 
-        params.require(:message).permit(:content)
+        params.require(:message).permit(:content, :user_id)
     end
 end

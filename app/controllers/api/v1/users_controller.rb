@@ -1,7 +1,6 @@
 class Api::V1::UsersController < ApplicationController
-
     def index 
-        @Users.all = User.all 
+        @Users = User.all 
 
         render json: @users, status: 200
     end
@@ -15,7 +14,7 @@ class Api::V1::UsersController < ApplicationController
     def create
         @user = User.create(user_params)
         
-        render json: @message, status: 200
+        render json: @user, status: 200
 
     end
 
@@ -34,7 +33,7 @@ class Api::V1::UsersController < ApplicationController
     private 
 
     def user_params 
-        params.require(:user).permit(:user_id, :username )
+        params.require(:user).permit(:username )
     end
 
 end
